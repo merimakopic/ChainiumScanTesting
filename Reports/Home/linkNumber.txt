@@ -1,0 +1,24 @@
+Number of links: 19 
+
+Existing texts of links: 
+ = http://localhost:4200/
+Home = http://localhost:4200/
+Blocks = http://localhost:4200/blocks
+Transactions = http://localhost:4200/transactions
+Validators = http://localhost:4200/validators
+ = http://localhost:4200/
+ = http://localhost:4200/blocks
+ = http://localhost:4200/transactions
+ = http://localhost:4200/validators
+Own = https://weown.com/
+products and services = https://weown.com/our-products-services
+ = https://weown.com/
+ = https://t.me/OwnMarket
+ = https://www.linkedin.com/company/ownmarket/
+ = https://medium.com/ownmarket
+ = https://github.com/OwnMarket
+ = https://twitter.com/OwnMarket
+ = https://www.youtube.com/c/OwnMarket
+ = https://www.facebook.com/OwnMarket
+
+ NUMBER OF LINKS THAT DOES NOT HAVE TEXT: 13 
