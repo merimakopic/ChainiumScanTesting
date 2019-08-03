@@ -1,4 +1,8 @@
 Search element is located
 Search element is displayed
 Search element is enabled
-ENTER KEY ON SEARCH ELEMENT DOES NOT WORK
+ENTER KEY ON SEARCH ELEMENT DOES NOT WORK. INPUT ELEMENT WITH ID = UserInput
+Search opens right page
+INFORMATION ABOUT 'No result for searched page, or invalid input' - THAT SHOULD BE ADDED
+
+This is not testing of search algorithm, just of search bar element!
