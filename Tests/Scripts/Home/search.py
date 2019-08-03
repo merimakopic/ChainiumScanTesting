@@ -38,11 +38,36 @@ class testing(unittest.TestCase):
         search.send_keys("something", Keys.ENTER)
         new_url = browser.current_url
         if curr_url == new_url:
-            file.write("ENTER KEY ON SEARCH ELEMENT DOES NOT WORK\n")
+            file.write("ENTER KEY ON SEARCH ELEMENT DOES NOT WORK. INPUT ELEMENT WITH ID = UserInput\n")
         else:
             file.write("ENTER key on search element works\n")
 
-        search.send_keys("transactions")
+        #check whether, warning about invalid input exists in search algorithm
+        #search can be done by block / transaction / address / account / asset / validator
+        #it opens the same template of a page with different information, when search text is valid
+        #what happens if search text is not valid?
+        search.clear()
+        search.send_keys("13169")
+        search_button = browser.find_element_by_xpath('//*[@id="Search-Bar"]/div/div/div/div/button')
+        search_button.click()
+        html = browser.page_source
+        if "Basic Info" and "Additional Info" in html:
+            file.write("Search opens right page\n")
+        else:
+            file.write("SEARCH DOES NOT OPEN RIGHT PAGE. SEARCH BY BLOCK NUMBER: 13169\n")
+
+        browser.back()
+        search = browser.find_element_by_id("UserInput")
+        search.click()
+        search.clear()
+        search.send_keys("invalidinvalidinvalidinvalid")
+        search_button = browser.find_element_by_xpath('//*[@id="Search-Bar"]/div/div/div/div/button')
+        search_button.click()
+        if "Basic Info" and "Additional Info" in html:
+            file.write("INFORMATION ABOUT 'No result for searched page, or invalid input' - THAT SHOULD BE ADDED\n")
+
+        file.write("\nThis is not testing of search algorithm, just of search bar element!\n")        
+
 
 if __name__ == "__main__":
     unittest.main()
