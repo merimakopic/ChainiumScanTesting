@@ -19,7 +19,7 @@ class testing(unittest.TestCase):
 
     def test_search(self):
         wait = WebDriverWait(browser, 3)
-        wait.until(EC.element_to_be_clickable((By.ID, "UserInput")))
+        wait.until(EC.visibility_of_element_located((By.ID, "UserInput")))
         search = browser.find_element_by_id("UserInput")
         file = open("/home/merima/ChainiumScanTesting/Reports/Home/search.txt", "w+")
         file.write("Search element is located\n")
@@ -31,12 +31,18 @@ class testing(unittest.TestCase):
             file.write("Search element is enabled\n")
         else:
             file.write("SEARCH ELEMENT IS NOT ENABLED\n")
+        
         search.click()
-        time.sleep(4)
-        search.clear
+        search.clear()
+        curr_url = browser.current_url
+        search.send_keys("something", Keys.ENTER)
+        new_url = browser.current_url
+        if curr_url == new_url:
+            file.write("ENTER KEY ON SEARCH ELEMENT DOES NOT WORK\n")
+        else:
+            file.write("ENTER key on search element works\n")
 
-        search.send_keys("something")
-        time.sleep(4)
+        search.send_keys("transactions")
 
 if __name__ == "__main__":
     unittest.main()
