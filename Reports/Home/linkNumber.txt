@@ -1,5 +1,4 @@
 Number of links: 19 
-
 Existing texts of links: 
  = http://localhost:4200/
 Home = http://localhost:4200/
