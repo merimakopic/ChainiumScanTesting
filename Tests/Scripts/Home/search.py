@@ -19,8 +19,8 @@ class testing(unittest.TestCase):
 
     def test_search(self):
         wait = WebDriverWait(browser, 3)
-        wait.until(EC.element_to_be_clickable((By.XPATH, '//*[@id="Search-Bar"]/div/div')))
-        search = browser.find_element_by_css_selector("#Search-Bar > div > div > div")
+        wait.until(EC.element_to_be_clickable((By.ID, "UserInput")))
+        search = browser.find_element_by_id("UserInput")
         file = open("/home/merima/ChainiumScanTesting/Reports/Home/search.txt", "w+")
         file.write("Search element is located\n")
         if search.is_displayed():
@@ -32,10 +32,11 @@ class testing(unittest.TestCase):
         else:
             file.write("SEARCH ELEMENT IS NOT ENABLED\n")
         search.click()
+        time.sleep(4)
         search.clear
 
         search.send_keys("something")
-       
+        time.sleep(4)
 
 if __name__ == "__main__":
     unittest.main()
