@@ -1,0 +1,3 @@
+Search element is located
+Search element is displayed
+Search element is enabled
