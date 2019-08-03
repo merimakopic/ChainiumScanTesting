@@ -64,7 +64,7 @@ class testing(unittest.TestCase):
         search_button = browser.find_element_by_xpath('//*[@id="Search-Bar"]/div/div/div/div/button')
         search_button.click()
         if "Basic Info" and "Additional Info" in html:
-            file.write("INFORMATION ABOUT 'No result for searched page, or invalid input' - THAT SHOULD BE ADDED\n")
+            file.write("INFORMATION ABOUT 'No result for searched page, or invalid input' - THAT SHOULD BE ADDED\n\n")
 
         file.write("\nThis is not testing of search algorithm, just of search bar element!\n")        
 
