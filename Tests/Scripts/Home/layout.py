@@ -20,10 +20,6 @@ class testingHome(unittest.TestCase):
 
     def test_screenshot(self):
         browser.save_screenshot("/home/merima/ChainiumScanTesting/Reports/Home/layout.png")
-        
-    def test_blocks(self):
-        latest_blocks = browser.find_element_by_xpath('//*[@id="blockContainer"]/table')
-        #not finished
 
 
 if __name__ == "__main__":
