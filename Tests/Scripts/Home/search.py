@@ -8,7 +8,7 @@ import time
 
 browser = webdriver.Chrome()
 
-class testing(unittest.TestCase):
+class testingHome(unittest.TestCase):
     @classmethod
     def setUpClass(self):
         browser.get("localhost:4200")
