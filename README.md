@@ -55,12 +55,16 @@ Mine: *Version 76.0.3809.87 (Official Build) (64-bit)*
 
 Open [this link](https://sites.google.com/a/chromium.org/chromedriver/) to download appropriate webdriver. Remember version of your Google Chrome and download the same version of webdriver.
 
-Now open a new terminal and type command:
+Now open a new terminal in directory where you downloaded chromedriver. Make sure that the name of webdriver is *chromedriver* and type command:
 ```bash
+$ sudo mv chromedriver /usr/bin/chromedriver
+```
+Add it to PATH:
+```bash
+$ export PATH=$PATH:'/path/to/driver/chrome-driver'
 ```
 
-
-## Clone the project
+## Clone the project and run scripts
 
 Open new terminal:
 ```bash
@@ -69,7 +73,8 @@ $ git clone https://github.com/merimakopic/ChainiumScanTesting.git
 ```bash
 $ cd ChainiumScanTesting/Tests/Scripts
 ```
-Open Home or comming repository: Blocks, Transactions, Validators by typing command:
+Open Home or one of the comming repository: Blocks, Transactions, Validators by typing command:
+(for now Home)
 
 ```bash
 $ cd 'name_of_repository'
