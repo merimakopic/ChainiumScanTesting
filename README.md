@@ -25,11 +25,35 @@ $ sudo apt-get install python3.6
 $ sudo apt install -y python3-pip
 ```
 ```bash
-$ pip3 install virtualenv
+$ pip install virtualenv
+```
+```bash
+pip install selenium
+```
+```bash
+pip install unittest
 ```
 Open new terminal:
 ```bash
 $ git clone https://github.com/merimakopic/ChainiumScanTesting.git
 ```
+```bash
+$ cd ChainiumScanTesting/Tests/Scripts
+```
+Open Home or comming repository: Blocks, Transactions, Validators by typing command:
 
-111
+```bash
+$ cd 'name_of_repository'
+```
+For example:
+```bash
+$ cd Home
+```
+To run Python script, type:
+```bash
+$ python 'name_of_the_file.py'
+```
+For example:
+```bash
+$ python search.py
+```
